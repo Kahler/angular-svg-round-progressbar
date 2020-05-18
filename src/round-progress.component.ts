@@ -30,6 +30,14 @@ import {RoundProgressEase} from './round-progress.ease';
         [style.stroke-width]="stroke"/>
 
       <path
+          #path
+          fill="none"
+          [style.stroke-width]="stroke + outline"
+          [style.stroke]="resolveColor('#fff')"
+          [style.stroke-linecap]="rounded ? 'round' : ''"
+          [attr.transform]="getPathTransform()"/>
+      
+      <path
         #path
         fill="none"
         [style.stroke-width]="stroke"
@@ -90,6 +98,9 @@ export class RoundProgressComponent implements OnChanges {
 
   /** Width of the circle's stroke. */
   @Input() stroke: number = this._defaults.stroke;
+
+  /** Width of the circle's stroke. */
+  @Input() outline: number = this._defaults.outline;
 
   /** Color of the circle. */
   @Input() color: string = this._defaults.color;

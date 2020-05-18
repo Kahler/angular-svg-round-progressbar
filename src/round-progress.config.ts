@@ -11,6 +11,7 @@ export const ROUND_PROGRESS_DEFAULTS_PROVIDER: Provider = {
     animationDelay: null,
     duration: 500,
     stroke: 15,
+    outline: 0,
     color: '#45CCCE',
     background: '#EAEAEA',
     responsive: false,
@@ -26,6 +27,7 @@ export interface RoundProgressDefaults {
   animationDelay?: number;
   duration?: number;
   stroke?: number;
+  outline?: number;
   color?: string;
   background?: string;
   responsive?: boolean;
